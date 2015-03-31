@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Designcoil_Editreviewdate>
+			<version>0.1.0</version>
+		</Designcoil_Editreviewdate>
+	</modules>
+	<global>
+		<models>
+            <designcoil_editreviewdate>
+                <class>Designcoil_Editreviewdate_Model</class>
+            </designcoil_editreviewdate>
+        </models>
+		<blocks>
+			<adminhtml>
+                <rewrite>
+                    <review_edit_form>Designcoil_Editreviewdate_Block_Adminhtml_Review_Edit_Form</review_edit_form>
+                </rewrite>
+            </adminhtml>
+		</blocks>
+		<helpers>
+            <designcoil_editreviewdate>
+                <class>Designcoil_Editreviewdate_Helper</class>
+            </designcoil_editreviewdate>
+        </helpers>
+	</global>
+	<admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Designcoil_Editreviewdate before="Mage_Adminhtml">Designcoil_Editreviewdate_Adminhtml</Designcoil_Editreviewdate>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
